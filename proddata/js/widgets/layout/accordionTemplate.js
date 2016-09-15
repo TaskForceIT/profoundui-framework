@@ -48,6 +48,7 @@ pui.layout.template.accordionTemplate = function(parms) {
     ]);
   }
 
+  var dom;
   if (existingDom != null) {
     dom = existingDom.cloneNode(false);
   }
@@ -63,7 +64,7 @@ pui.layout.template.accordionTemplate = function(parms) {
   dom.accordion = accordion;
   dom.sizeMe = function() {
     dom.accordion.resize();
-  }
+  };
   
   var sectionNames = properties["section names"];
   accordion.setSectionNames(sectionNames);  
@@ -95,5 +96,5 @@ pui.layout.template.accordionTemplate = function(parms) {
 
   return dom;
 
-}
+};
 
