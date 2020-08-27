@@ -63,9 +63,7 @@ pui.layout.template.responsiveLayoutTemplate = function (parms) {
   //Expose ResponsiveLayout so that layout.setProperty can handle the "id" correctly.
   dom.responsivelayout = reslay;
 
-  dom.sizeMe = function () {
-    dom.responsivelayout.resize();
-  };
+  dom.sizeMe = dom.responsivelayout.resize.bind(dom.responsivelayout);
 
   // Map special setters to properties. These are called at the end of pui.Layout.layout.setProperty(), which is
   // the global property setter for "layout" widgets. When one property changes, each are evaluated in this order.
